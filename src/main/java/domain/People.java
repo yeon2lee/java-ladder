@@ -17,4 +17,8 @@ public class People {
             throw new IllegalArgumentException("참여할 사람은 두 명 이상이어야 합니다.");
         }
     }
+
+    public int getParticipantsSize() {
+        return people.size();
+    }
 }
