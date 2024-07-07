@@ -15,6 +15,12 @@ public class Ladder {
         this.lines = lines;
     }
 
+    public List<List<Boolean>> getPoints() {
+        return lines.stream()
+                .map(Line::getPoints)
+                .toList();
+    }
+
     private void validateHeight(int height) {
         if (height < 1) {
             throw new IllegalArgumentException("사다리 높이는 1 이상이어야한다");

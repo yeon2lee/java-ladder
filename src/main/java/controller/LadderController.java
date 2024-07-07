@@ -19,6 +19,7 @@ public class LadderController {
         People people = preparePeople();
         Ladder ladder = prepareLadder(people);
         outputView.printPeopleName(people);
+        outputView.printLadder(ladder);
     }
 
     private People preparePeople() {
