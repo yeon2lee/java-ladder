@@ -3,11 +3,13 @@ package controller;
 import domain.Ladder;
 import domain.People;
 import view.InputView;
+import view.OutputView;
 
 import java.util.List;
 
 public class LadderController {
     InputView inputView;
+    OutputView outputView;
 
     public LadderController(InputView inputView) {
         this.inputView = inputView;
@@ -16,6 +18,7 @@ public class LadderController {
     public void run() {
         People people = preparePeople();
         Ladder ladder = prepareLadder(people);
+        outputView.printPeopleName(people);
     }
 
     private People preparePeople() {

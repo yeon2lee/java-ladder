@@ -12,6 +12,10 @@ public class People {
         this.people = people;
     }
 
+    public List<Person> getPeople() {
+        return people;
+    }
+
     private void validate(List<String> names) {
         if (names.size() < 2) {
             throw new IllegalArgumentException("참여할 사람은 두 명 이상이어야 합니다.");
