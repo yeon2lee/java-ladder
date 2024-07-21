@@ -23,6 +23,10 @@ public class Ladder {
                 .toList();
     }
 
+    public List<String> getGameResult() {
+        return gameResult;
+    }
+
     private void validateHeight(int height) {
         if (height < 1) {
             throw new IllegalArgumentException("사다리 높이는 1 이상이어야한다");
