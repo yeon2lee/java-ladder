@@ -30,6 +30,12 @@ public class InputView {
         return parseNumeric(input);
     }
 
+    public String getPeople() {
+        System.out.println("결과를 보고 싶은 사람은?");
+        String input = scan.nextLine();
+        return input;
+    }
+
     private int parseNumeric(String input) {
         try {
             return Integer.parseInt(input);
