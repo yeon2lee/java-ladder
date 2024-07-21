@@ -11,8 +11,14 @@ public class Line {
     public Line(int n) {
         List<Boolean> points = new ArrayList<>();
         Random random = new Random();
+        boolean before = false;
         for (int i = 0; i < n - 1; i++) {
-            points.add(random.nextBoolean());
+            boolean line = random.nextBoolean();
+            if (before) {
+                line = false;
+            }
+            points.add(line);
+            before = line;
         }
         this.points = points;
     }

@@ -1,9 +1,6 @@
 package view;
 
-import domain.Ladder;
-import domain.Line;
-import domain.People;
-import domain.Person;
+import domain.*;
 
 import java.util.List;
 import java.util.StringJoiner;
@@ -24,6 +21,11 @@ public class OutputView {
                 .map(m -> String.format("%5s", m))
                 .toList();
         System.out.println(String.join(" ", gameResult));
+    }
+
+    public void printResult(Result result) {
+        System.out.println("실행 결과");
+        System.out.println(result.getResult());
     }
 
     private void printLine(List<Boolean> line) {

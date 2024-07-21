@@ -1,7 +1,5 @@
 package view;
 
-import com.sun.security.jgss.GSSUtil;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -30,7 +28,7 @@ public class InputView {
         return parseNumeric(input);
     }
 
-    public String getPeople() {
+    public String getChoice() {
         System.out.println("결과를 보고 싶은 사람은?");
         String input = scan.nextLine();
         return input;

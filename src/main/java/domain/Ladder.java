@@ -32,4 +32,5 @@ public class Ladder {
             throw new IllegalArgumentException("사다리 높이는 1 이상이어야한다");
         }
     }
+
 }
