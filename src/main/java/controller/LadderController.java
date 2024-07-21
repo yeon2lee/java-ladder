@@ -28,8 +28,9 @@ public class LadderController {
     }
 
     private Ladder prepareLadder(People people) {
+        List<String> gameResult = inputView.getGameResult();
         int ladderHeight = inputView.getLadderHeight();
         int numberOfPeople = people.getParticipantsSize();
-        return new Ladder(ladderHeight, numberOfPeople);
+        return new Ladder(ladderHeight, numberOfPeople, gameResult);
     }
 }

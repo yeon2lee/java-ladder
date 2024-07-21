@@ -5,14 +5,16 @@ import java.util.List;
 
 public class Ladder {
     private List<Line> lines;
+    private List<String> gameResult;
 
-    public Ladder(int height, int numberOfPeople) {
+    public Ladder(int height, int numberOfPeople, List<String> gameResult) {
         validateHeight(height);
         List<Line> lines = new ArrayList<>();
         for (int i = 0; i < height; i++) {
             lines.add(new Line(numberOfPeople));
         }
         this.lines = lines;
+        this.gameResult = gameResult;
     }
 
     public List<List<Boolean>> getPoints() {

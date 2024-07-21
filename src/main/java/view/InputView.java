@@ -1,5 +1,7 @@
 package view;
 
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,6 +16,12 @@ public class InputView {
 
     private List<String> splitName(String input) {
         return List.of(input.split(","));
+    }
+
+    public List<String> getGameResult() {
+        System.out.println("실행 결과를 입력하세요. (결과는 쉼표(,)로 구분하세요");
+        String input = scan.nextLine();
+        return splitName(input);
     }
 
     public int getLadderHeight() {
