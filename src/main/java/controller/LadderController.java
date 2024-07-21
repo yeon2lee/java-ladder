@@ -11,8 +11,9 @@ public class LadderController {
     InputView inputView;
     OutputView outputView;
 
-    public LadderController(InputView inputView) {
+    public LadderController(InputView inputView, OutputView outputView) {
         this.inputView = inputView;
+        this.outputView = outputView;
     }
 
     public void run() {
